@@ -1,0 +1,8 @@
+@function ls-to-css ($interval, $fz:16px, $type:em){
+    
+   @if $type == em {
+     @return $interval / 1000 + em;
+   } @else if $type == px {
+     @return $interval* $fz / 1000;
+   }
+}
